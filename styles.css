@@ -9,7 +9,12 @@ h1, h2, h3, p, ul, ol {
 	padding: 0;
 }
 
-/********* End CSS Reset *********/
+nav ul, nav ol {
+	list-style-type: none;
+}
+
+
+/********* Main Styles *********/
 
 body {
 	font-family: 'Open Sans Condensed', sans-serif;
@@ -34,7 +39,60 @@ section{ padding: 30px 15px; }
 	grid-gap: 30px;
 }
 
+
+/******* Navigation styles *******/
+
+#navigation {
+	position: relative;
+}
+
+#mobilenav {
+	background: #f69331;
+	margin-bottom: 20px;
+	padding-right: 20px;
+}
+
+#mobilenav h2 {
+	text-align: right;
+	line-height: 50px;
+	color: #ebebeb;
+	font-size: 36px;
+}
+	
+#mainnav {
+	width: 200px;
+	position: absolute;
+	top: 50px;
+	right: 0px;
+	border-top: 1px solid #ca6a0c;
+}
+
+#mainnav ul {
+	background: #f69331;
+}
+
+#mainnav ul li a {
+	display:block;
+	background:#f69331;
+	color:#ebebeb;
+	font-weight:700;
+	font-size:36px;
+	line-height:50px;
+	text-decoration:none;
+	text-transform:uppercase;
+	text-align:right;
+	padding-right: 20px;
+	width:180px;
+	border-bottom: 1px solid #ca6a0c;
+}
+
+#mainnav ul li a:hover {
+	background:#40606f;
+}
+
+
 /******* Top section styles *******/
+
 #top { padding: 0; }
 
 #top { display: flex; }
@@ -45,7 +103,9 @@ section{ padding: 30px 15px; }
 
 #top article:last-of-type { background:#793f04; }
 
+
 /********** Footer Rules **********/
+
 footer {
 	display: flex;
 	background:#793f04;
@@ -61,6 +121,7 @@ footer section:last-of-type{
 	padding-left: 5px;
 	padding-top: 30px;
 }
+
 
 /********** Typography Rules **********/
 
@@ -79,7 +140,9 @@ p { line-height: 1.3em; }
 
 #new-release h2 { color:#303030; }
 
+
 /************ Logo Styles ***************/
+
 header h1 { 
 	font-size: 20vw;
 	text-align: center;
@@ -103,6 +166,7 @@ footer h2 { font-size: 24px; }
 .space { color:#40606f; }
 
 footer .space { color:#bdd4de; }
+
 
 /************ Card Flip Styles **************/
 
@@ -165,6 +229,7 @@ footer .space { color:#bdd4de; }
 	color:#40606f;
 }
 
+
 /************ Responsive Media Queries ***************/
 
 @media only screen and (min-width: 600px) {
@@ -197,6 +262,36 @@ footer .space { color:#bdd4de; }
 		font-size: 24px;
 	}
 	
+	#mobilenav {
+		display: none;
+	}
+	
+	#mainnav {
+		box-sizing: border-box;
+		position: static;
+		width: 100%;
+		margin-bottom: 20px;
+		border-top: none;
+		border-left: 1px solid #ca6a0c;
+	}
+	
+	#mainnav ul {
+		display: flex;
+	}
+	
+	#mainnav ul li {
+		flex: 1;
+	}
+	
+	#mainnav ul li a {
+		width: 100%;
+		box-sizing: border-box;
+		padding: 0;
+		text-align: center;
+		border-bottom: none;
+		border-right: 1px solid #ca6a0c;
+	}
+	
 }
 
 @media only screen and (min-width: 960px) {
@@ -214,6 +309,3 @@ footer .space { color:#bdd4de; }
 		font-size: 36px;
 	}
 }
-
-
-
